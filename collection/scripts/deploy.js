@@ -21,16 +21,16 @@ async function main() {
     const Contract = await ethers.getContractFactory("StarryNights");
     console.log("Deployment started🔹🔹🔹, returning a promise that resolves to a contract object 🤞"); 
     // here we deploy the contract
-    const deployedConttract = await Contract.deploy(
+    const deployedContract = await Contract.deploy(
       METADATA_URL, WHITELIST_CONTRACT_ADDRESS
     );
     // 10 is the Maximum number of whitelisted addresses allowed
   
     // Wait for it to finish deploying
-    await deployedConttract.deployed();
+    await deployedContract.deployed();
   
-    // print the address of the deployed contract  // 0x9C6A06f8baDF08126F79432d5053Edc59C6fA5c0
-    console.log("🎉Contract Address ==>", deployedConttract.address);
+    // print the address of the deployed contract  // 0x7903FfeD50A6B249747879DD3e04b70616659768 // 0x9C6A06f8baDF08126F79432d5053Edc59C6fA5c0 
+    console.log("🎉Contract Address ==>", deployedContract.address);
 
 }
 

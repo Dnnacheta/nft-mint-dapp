@@ -30,6 +30,7 @@ contract StarryNights is ERC721Enumerable, Ownable {
     // timestamp for when presale ends
     uint256 public presaleEnded;
 
+    // Events for certain functions
     event PreMinted(address indexed user, uint256 tokenId);
     event Minted(address indexed user, uint256 tokenId);
     event withdrawAll(address indexed owner, uint256 amount);
